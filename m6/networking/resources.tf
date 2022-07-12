@@ -77,6 +77,7 @@ module "vpc" {
   private_subnets = data.template_file.private_cidrsubnet.*.rendered
   public_subnets  = data.template_file.public_cidrsubnet.*.rendered
 
+#NAT gateway needed for the applications exercises
   enable_nat_gateway = true
 
   create_database_subnet_group = false
